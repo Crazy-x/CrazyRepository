@@ -10,12 +10,18 @@ import org.junit.Test;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 自动生成代码的工具类
+ */
 public class MybatisPlusGenerator {
 
+    // 下面四个属性需要改的
     private static final String DB_URL = "jdbc:mysql://127.0.0.1/demo-dev?characterEncoding=utf8";
     private static final String DB_USER = "root";
     private static final String DB_PASS = "root";
     private static final String ROOT = "F:/IdeaProject/demo/demo-admin";
+
+    // 这下面的不需要改
     private static final String DIR = "/src/main/java";
     private static final String BASE_PACKAGE = "com.example.demo";
     private static final String AUTHOR = "Crazy";

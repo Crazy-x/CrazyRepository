@@ -43,14 +43,14 @@
             <version>${mybatis.plus.version}</version>
         </dependency>
 
-        <!--druid连接池-->
+        <!--druid：数据连接池-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
             <version>${druid.version}</version>
         </dependency>
 
-        <!--swagger2：REST ful API-->
+        <!--swagger2：REST ful API 说明-->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
@@ -70,15 +70,16 @@
             <artifactId>spring-boot-starter-logging</artifactId>
         </dependency>
 
-        <!--bean utils-->
+        <!--bean utils：类工具包-->
         <dependency>
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
-            <version>${beanutils.version}</version>
+            <version>${bean.utils.version}</version>
         </dependency>
 
     </dependencies>
 
+    <!--构建打包资源文件-->
     <build>
         <plugins>
             <plugin>
@@ -86,17 +87,26 @@
                 <artifactId>maven-resources-plugin</artifactId>
                 <executions>
                     <execution>
+
+                        <!--默认的资源-->
                         <id>default-resources</id>
                         <phase>validate</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
+
+                        <!--复制resources-->
+                        <!--<goals>-->
+                        <!--<goal>copy-resources</goal>-->
+                        <!--</goals>-->
+
                         <configuration>
-                            <outputDirectory>target/classes</outputDirectory>
-                            <useDefaultDelimiters>false</useDefaultDelimiters>
-                            <delimiters>
-                                <delimiter>#</delimiter>
-                            </delimiters>
+
+                            <!--复制resources到下面的路径，这个项目并没有此文件夹！！-->
+                            <!--<outputDirectory>target/classes</outputDirectory>-->
+                            <!--<useDefaultDelimiters>false</useDefaultDelimiters>-->
+                            <!--<delimiters>-->
+                            <!--<delimiter>#</delimiter>-->
+                            <!--</delimiters>-->
+
+                            <!--需要打包构建的文件-->
                             <resources>
                                 <resource>
                                     <directory>src/main/resources/</directory>
@@ -106,6 +116,8 @@
                                         <include>**/*.yml</include>
                                     </includes>
                                 </resource>
+
+                                <!--需要排除构建的文件-->
                                 <resource>
                                     <directory>src/main/resources/</directory>
                                     <filtering>false</filtering>
@@ -141,18 +153,28 @@
 
         <!-- 开发环境配置 -->
         <profile>
+
             <id>dev</id>
+
+            <!--设置为默认环境-->
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
+
+            <!--开发环境附加依赖-->
             <dependencies>
+
+                <!--开发工具：热部署-->
                 <dependency>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-devtools</artifactId>
                     <optional>true</optional>
                 </dependency>
+
             </dependencies>
-            <build>
+
+            <!--此项目木有webapp，所以不用构建打包-->
+            <!--<build>
                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
@@ -162,31 +184,38 @@
                         </configuration>
                     </plugin>
                 </plugins>
-            </build>
+            </build>-->
+
             <properties>
-                <!-- log configuration -->
+                <!-- 日志配置 -->
                 <logback.loglevel>DEBUG</logback.loglevel>
                 <logback.path>./logs</logback.path>
-                <!-- default spring profiles -->
+                <!--启动开发环境配置 -->
                 <spring.profiles.active>dev</spring.profiles.active>
             </properties>
+
         </profile>
 
         <!-- 测试环境 -->
         <profile>
+
             <id>test</id>
+
             <build>
                 <plugins>
                 </plugins>
             </build>
+
             <properties>
-                <!-- log configuration -->
+                <!-- 日志配置 -->
                 <logback.loglevel>DEBUG</logback.loglevel>
                 <logback.path>/app/logs</logback.path>
-                <!-- default spring profiles -->
+                <!-- 启用测试环境配置 -->
                 <spring.profiles.active>test</spring.profiles.active>
             </properties>
+
         </profile>
+
     </profiles>
 
 </project>

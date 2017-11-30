@@ -12,6 +12,7 @@ import java.io.Serializable;
 
 /**
  * <p>
+ * 用户实体类
  * </p>
  *
  * @author Crazy

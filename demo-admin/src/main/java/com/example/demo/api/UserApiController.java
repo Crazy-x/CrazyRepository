@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 
 /**
  * <p>
- * API 控制器
+ * User API 控制器
  * </p>
  *
  * @author Crazy

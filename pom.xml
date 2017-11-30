@@ -15,7 +15,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.8.RELEASE</version>
-        <relativePath/> <!-- 主pom不用写路径 -->
+        <relativePath/> <!-- 相对路径：主pom不用写路径 -->
     </parent>
 
     <!-- 属性标签，统一管理依赖版本信息，使用方法：${java.version} -->
@@ -29,12 +29,12 @@
         <mybatis.version>1.2.0</mybatis.version>
         <springfox.version>2.6.1</springfox.version>
         <mybatis.plus.version>2.0.8</mybatis.plus.version>
-        <beanutils.version>20030211.134440</beanutils.version>
+        <bean.utils.version>20030211.134440</bean.utils.version>
 
     </properties>
 
     <!-- 依赖管理 -->
-    <!--dependencyManagement里只是声明依赖，并不实现引入，因此子项目需要显式的声明需要用的依赖。-->
+    <!--dependencyManagement里只是声明依赖，并不实现引入，因此子项目需要显式的声明需要用的依赖。我这里没使用！-->
     <!--<dependencyManagement>-->
     <dependencies>
 
@@ -58,19 +58,19 @@
             <optional>true</optional>
         </dependency>
 
-        <!-- autoconfigure：开启自动配置注解 -->
+        <!-- autoconfigure：开启自动装配注解 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
         </dependency>
 
-        <!-- redis -->
+        <!-- redis：No Sql 框架 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
-        <!-- test -->
+        <!-- test：测试类依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -106,7 +106,7 @@
         </repository>
     </repositories>
 
-    <!-- 插件远程仓库 -->
+    <!-- 插件远程仓库：原理同上 -->
     <pluginRepositories>
         <pluginRepository>
             <id>aliyun</id>

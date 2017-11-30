@@ -21,18 +21,22 @@ spring:
         favicon:
             enabled: false
 
+#公共属性
 application:
     base-package: com.example.demo
+
 #------------------------------
 #日志相关配置
 #------------------------------
 logging:
     path: /app/logs
+
 #------------------------------
 #mybatis配置信息
 #------------------------------
 mybatis:
     configuration:
+        #开启驼峰转换
         map-underscore-to-camel-case: true
     #mapper.xml文件的路径
     mapper-locations: classpath*:mapper/*.xml
