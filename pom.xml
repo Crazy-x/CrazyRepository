@@ -29,6 +29,7 @@
         <mybatis.version>1.2.0</mybatis.version>
         <springfox.version>2.6.1</springfox.version>
         <mybatis.plus.version>2.0.8</mybatis.plus.version>
+        <beanutils.version>20030211.134440</beanutils.version>
 
     </properties>
 

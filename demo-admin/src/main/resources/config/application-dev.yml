@@ -18,6 +18,9 @@ spring:
         livereload:
             enabled: false # 实时刷新
 
+application:
+    base-package: com.example.demo
+
 #------------------------------
 #日志相关配置
 #------------------------------

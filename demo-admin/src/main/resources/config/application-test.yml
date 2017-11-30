@@ -17,6 +17,10 @@ spring:
              enabled: false
          livereload:
              enabled: false # 实时刷新
+
+ application:
+     base-package: com.example.demo
+
  #------------------------------
  #日志相关配置
  #------------------------------
@@ -24,6 +28,7 @@ logging:
     path: /app/logs
     level:
         root: debug
+
 #------------------------------
 #数据源配置信息，可以配置多个
 #------------------------------
