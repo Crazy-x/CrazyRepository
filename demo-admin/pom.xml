@@ -77,6 +77,13 @@
             <version>${bean.utils.version}</version>
         </dependency>
 
+        <!--java微服务框架：常用代码产生器-->
+        <dependency>
+            <groupId>io.github.jhipster</groupId>
+            <artifactId>jhipster</artifactId>
+            <version>${jhipster.version}</version>
+        </dependency>
+
     </dependencies>
 
     <!--构建打包资源文件-->

@@ -27,6 +27,7 @@
         <druid.version>1.0.29</druid.version>
         <velocity.version>1.7</velocity.version>
         <mybatis.version>1.2.0</mybatis.version>
+        <jhipster.version>1.1.2</jhipster.version>
         <springfox.version>2.6.1</springfox.version>
         <mybatis.plus.version>2.0.8</mybatis.plus.version>
         <bean.utils.version>20030211.134440</bean.utils.version>
