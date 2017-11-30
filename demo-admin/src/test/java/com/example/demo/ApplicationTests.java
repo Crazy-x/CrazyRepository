@@ -24,6 +24,6 @@ public class ApplicationTests {
 
         User user = userList.get(0);
 
-        System.out.println(user.getAccount() + user.getName());
+        System.out.println(user.getAccount());
     }
 }
