@@ -17,6 +17,7 @@ spring:
             enabled: true
         livereload:
             enabled: false # 实时刷新
+
 #------------------------------
 #日志相关配置
 #------------------------------
@@ -31,6 +32,7 @@ logging:
         org.springframework.web: info
         org.springframework.web.context: info
         com.baomidou: info
+
 #------------------------------
 #数据源配置信息，可以配置多个
 #------------------------------
