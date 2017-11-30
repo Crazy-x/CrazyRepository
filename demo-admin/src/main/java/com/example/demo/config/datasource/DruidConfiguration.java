@@ -1,4 +1,4 @@
-package com.example.demo.config;
+package com.example.demo.config.datasource;
 
 import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;
@@ -7,6 +7,11 @@ import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * 数据源配置类，可以查看访问数据库连接信息
+ *
+ * 查看网址：http://127.0.0.1:8000/druid/index.html
+ */
 @Configuration
 public class DruidConfiguration {
 

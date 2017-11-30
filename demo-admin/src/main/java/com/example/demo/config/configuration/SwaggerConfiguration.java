@@ -1,4 +1,4 @@
-package com.example.demo.config;
+package com.example.demo.config.configuration;
 
 import io.github.jhipster.config.JHipsterProperties;
 import io.github.jhipster.config.JHipsterProperties.Swagger;
@@ -16,6 +16,11 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import static springfox.documentation.builders.PathSelectors.regex;
 
+/**
+ * Swagger UI 配置类，可以查看API信息了
+ *
+ * 查看网址：http://127.0.0.1:8000/swagger-ui.html
+ */
 @Configuration
 @EnableSwagger2
 public class SwaggerConfiguration {

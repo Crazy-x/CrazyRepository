@@ -1,4 +1,4 @@
-package com.example.demo.config;
+package com.example.demo.config.configuration;
 
 import com.baomidou.mybatisplus.MybatisConfiguration;
 import com.baomidou.mybatisplus.MybatisXMLLanguageDriver;
@@ -20,6 +20,9 @@ import org.springframework.util.StringUtils;
 
 import javax.sql.DataSource;
 
+/**
+ * Mybatis Plus配置类，代替xml
+ */
 @Configuration
 public class MybatisPlusConfiguration {
 

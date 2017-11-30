@@ -1,7 +1,10 @@
-package com.example.demo.config;
+package com.example.demo.config.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
+/**
+ * 从*.yml配置文件中读取application下对应的属性，然后注入为bean
+ */
 @ConfigurationProperties(prefix = "application", ignoreUnknownFields = true)
 public class ApplicationProperties {
 
