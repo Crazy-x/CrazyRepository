@@ -18,8 +18,14 @@ spring:
          livereload:
              enabled: false # 实时刷新
 
- application:
-     base-package: com.example.demo
+ #公共属性配置
+application:
+     #数据库服务地址
+    db-url: 127.0.0.1
+     #数据库名
+    db-name: demo-test
+     #包名
+    base-package: com.example.demo
 
  #------------------------------
  #日志相关配置
@@ -36,7 +42,7 @@ datasource:
     #主数据源
     master:
         name: master
-        url: jdbc:mysql://127.0.0.1/demo-test?autoReconnect=true&useUnicode=true&characterEncoding=utf8
+        url: jdbc:mysql://${application.db-url}/${application.db-name}?autoReconnect=true&useUnicode=true&characterEncoding=utf8
         username: root
         password: root
         #这里是配置druid连接池
