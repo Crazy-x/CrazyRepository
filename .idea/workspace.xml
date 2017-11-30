@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5181dbc3-e33d-4411-ae3a-dccba9957ccb" name="Default" comment="测试提交">
+    <list default="true" id="51835b5d-d9a8-4564-9da0-40782e5a9fe8" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <ignored path="$PROJECT_DIR$/demo-admin/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,17 +12,6 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/demo$Application.coverage" NAME="Application Coverage Results" MODIFIED="1511861362997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_TABLE_DETAILS" value="true" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <expand />
-    <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
@@ -100,122 +85,11 @@
       </file>
     </leaf>
   </component>
-  <component name="FindBugs-IDEA-Workspace">
-    <compileBeforeAnalyze>false</compileBeforeAnalyze>
-    <toolWindowToFront>false</toolWindowToFront>
-  </component>
-  <component name="Git.Settings">
-    <option name="UPDATE_TYPE" value="MERGE" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/demo-admin/src/main/java/com/example/demoadmin/Application.java" />
-        <option value="$PROJECT_DIR$/demo-admin/src/main/java/com/example/demoadmin/ServletInitializer.java" />
-        <option value="$PROJECT_DIR$/demo-admin/src/test/java/com/example/demo/DemoAdminApplicationTests.java" />
-        <option value="$PROJECT_DIR$/demo-admin/src/main/resources/META-INF/additional-spring-configuration-metadata.json" />
-        <option value="$PROJECT_DIR$/demo-admin/src/main/java/com/example/demo/entity/common/NodeModel.java" />
-        <option value="$PROJECT_DIR$/demo-admin/src/main/java/com/example/demo/core/api/RestApiController.java" />
-        <option value="$PROJECT_DIR$/demo-admin/src/main/java/com/example/demo/config/DruidConfiguration.java" />
-        <option value="$PROJECT_DIR$/demo-admin/src/main/java/com/example/demo/config/datasource/DataSourceConfiguration.java" />
-        <option value="$PROJECT_DIR$/demo-admin/src/main/java/com/example/demo/config/datasource/DynamicDataSource.java" />
-        <option value="$PROJECT_DIR$/demo-admin/src/test/java/com/example/demo/MybatisPlusGenerator.java" />
-        <option value="$PROJECT_DIR$/demo-admin/src/test/resources/templates/entity.java.vm" />
-        <option value="$PROJECT_DIR$/demo-admin/src/main/java/com/example/demo/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/demo-admin/src/main/java/com/example/demo/service/UserService.java" />
-        <option value="$PROJECT_DIR$/demo-admin/src/test/resources/templates/api-controller.java.vm" />
-        <option value="$PROJECT_DIR$/demo-admin/src/main/java/com/example/demo/utils/ResponseEntityBuilder.java" />
-        <option value="$PROJECT_DIR$/demo-admin/src/main/java/com/example/demo/mapper/UserMapper.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/demo-admin/src/main/java/com/example/demo/Application.java" />
-        <option value="$PROJECT_DIR$/demo-admin/src/main/java/com/example/demo/entity/common/Result.java" />
-        <option value="$PROJECT_DIR$/demo-admin/src/main/java/com/example/demo/api/UserApiController.java" />
-        <option value="$PROJECT_DIR$/demo-admin/src/main/java/com/example/demo/config/MybatisPlusConfiguration.java" />
-        <option value="$PROJECT_DIR$/demo-admin/src/main/java/com/example/demo/config/datasource/DynamicDataSourceHolder.java" />
-        <option value="$PROJECT_DIR$/demo-admin/src/main/java/com/example/demo/entity/User.java" />
-        <option value="$PROJECT_DIR$/demo-admin/src/main/java/com/example/demo/core/constant/API.java" />
-        <option value="$PROJECT_DIR$/demo-admin/src/main/resources/mapper/User.xml" />
-        <option value="$PROJECT_DIR$/demo-admin/src/main/resources/logback-spring.xml" />
-        <option value="$PROJECT_DIR$/demo-admin/src/main/resources/config/application-dev.yml" />
-        <option value="$PROJECT_DIR$/demo-admin/src/main/resources/config/application-test.yml" />
-        <option value="$PROJECT_DIR$/demo-admin/src/main/resources/config/application.yml" />
-        <option value="$PROJECT_DIR$/demo-admin/pom.xml" />
-        <option value="$PROJECT_DIR$/demo-admin/src/test/java/com/example/demo/ApplicationTests.java" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-      </list>
-    </option>
-  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsFlowSettings">
-    <service-enabled>true</service-enabled>
-    <exe-path />
-    <annotation-enable>false</annotation-enable>
-    <other-services-enabled>true</other-services-enabled>
-    <auto-save>true</auto-save>
-  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="990" />
-  </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-          <State>
-            <id>Android &gt; Lint &gt; Correctness</id>
-          </State>
-          <State>
-            <id>Android Lint for Kotlin</id>
-          </State>
-          <State>
-            <id>Internationalization issuesJava</id>
-          </State>
-          <State>
-            <id>Java</id>
-          </State>
-          <State>
-            <id>Probable bugsJava</id>
-          </State>
-          <State>
-            <id>Resource management issuesJava</id>
-          </State>
-          <State>
-            <id>SQL</id>
-          </State>
-          <State>
-            <id>Security issuesJava</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>SqlDialectInspection</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -243,11 +117,6 @@
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="demo-admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -267,41 +136,6 @@
       <pane id="PackagesPane" />
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="D:/" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.splitter.proportion" value="0.21201414" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth2" value="75" />
-    <property name="RequestMappingsPanelOrder2" value="2" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\IdeaProject\demo\demo-admin\src\main\resources\config" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.example.demo.utils" />
-      <recent name="com.example.demo" />
-      <recent name="com.example.demo.config" />
-      <recent name="com.example.demo.core.constant" />
-      <recent name="com.example.demo.core.api" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\IdeaProject\demo\demo-admin\src\main\resources" />
-      <recent name="F:\IdeaProject\demo\demo-admin\src\main\resources\mapper" />
-      <recent name="F:\IdeaProject\demo\demo-admin\src\test" />
-      <recent name="F:\IdeaProject\demo\demo-admin\src\main\java\com\example\demo\config" />
-      <recent name="F:\IdeaProject\demo\demo-admin\src\main\java\com\example\demo\entity" />
-    </key>
-  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -314,138 +148,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ApplicationTests">
-    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.Application" />
-      <module name="demo-admin" />
-      <envs />
-    </configuration>
-    <configuration name="ApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.example.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="demo-admin" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.example.demo" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.ApplicationTests" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="ApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.example.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="demo-admin" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.example.demo" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.ApplicationTests" />
-      <option name="METHOD_NAME" value="contextLoads" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="ApplicationTests.getNextDay" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.example.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="demo-admin" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.example.demo" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.ApplicationTests" />
-      <option name="METHOD_NAME" value="getNextDay" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="MybatisPlusGenerator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.example.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="demo-admin" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.example.demo" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.MybatisPlusGenerator" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="MybatisPlusGenerator.generate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.example.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="demo-admin" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.example.demo" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.MybatisPlusGenerator" />
-      <option name="METHOD_NAME" value="generate" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
+  <component name="RunManager">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -527,23 +230,6 @@
       <properties />
       <listeners />
     </configuration>
-    <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Spring Boot.Application" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.MybatisPlusGenerator" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.MybatisPlusGenerator.generate" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ApplicationTests.contextLoads" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ApplicationTests" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.ApplicationTests.getNextDay" />
-    </list>
-    <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ApplicationTests" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ApplicationTests.getNextDay" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ApplicationTests.contextLoads" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.MybatisPlusGenerator.generate" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.MybatisPlusGenerator" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -552,99 +238,10 @@
     <configuration />
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="5181dbc3-e33d-4411-ae3a-dccba9957ccb" name="Default" comment="" />
-      <created>1511770502677</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1511770502677</updated>
-      <workItem from="1511770504202" duration="1470000" />
-      <workItem from="1511772275888" duration="2136000" />
-      <workItem from="1511774523559" duration="2662000" />
-      <workItem from="1511832035285" duration="8589000" />
-      <workItem from="1511850757287" duration="11548000" />
-      <workItem from="1511917885072" duration="1028000" />
-      <workItem from="1511920001229" duration="300000" />
-      <workItem from="1511920341981" duration="2065000" />
-      <workItem from="1511922563130" duration="706000" />
-      <workItem from="1511923305036" duration="4128000" />
-      <workItem from="1511929606855" duration="2938000" />
-      <workItem from="1511932587171" duration="6244000" />
-      <workItem from="1511938995501" duration="10624000" />
-      <workItem from="1512004903334" duration="2799000" />
-    </task>
-    <task id="LOCAL-00001" summary="测试提交">
-      <created>1512007940030</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1512007940030</updated>
-    </task>
-    <task id="LOCAL-00002" summary="测试提交">
-      <created>1512008746604</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1512008746604</updated>
-    </task>
-    <task id="LOCAL-00003" summary="测试提交">
-      <created>1512009456198</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1512009456198</updated>
-    </task>
-    <task id="LOCAL-00004" summary="测试提交">
-      <created>1512009530569</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1512009530569</updated>
-    </task>
-    <task id="LOCAL-00005" summary="测试提交">
-      <created>1512009641882</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1512009641882</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="ApplicationTests - 2017.11.29 at 17h 55m 52s.xml">
-      <configuration name="ApplicationTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ApplicationTests_getNextDay - 2017.11.29 at 17h 47m 17s.xml">
-      <configuration name="ApplicationTests.getNextDay" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ApplicationTests_getNextDay - 2017.11.29 at 17h 47m 44s.xml">
-      <configuration name="ApplicationTests.getNextDay" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ApplicationTests_getNextDay - 2017.11.29 at 17h 48m 19s.xml">
-      <configuration name="ApplicationTests.getNextDay" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ApplicationTests_getNextDay - 2017.11.29 at 17h 49m 04s.xml">
-      <configuration name="ApplicationTests.getNextDay" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ApplicationTests_getNextDay - 2017.11.29 at 17h 49m 54s.xml">
-      <configuration name="ApplicationTests.getNextDay" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ApplicationTests_getNextDay - 2017.11.29 at 17h 52m 50s.xml">
-      <configuration name="ApplicationTests.getNextDay" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ApplicationTests_getNextDay - 2017.11.29 at 17h 52m 55s.xml">
-      <configuration name="ApplicationTests.getNextDay" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ApplicationTests_getNextDay - 2017.11.29 at 17h 53m 03s.xml">
-      <configuration name="ApplicationTests.getNextDay" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ApplicationTests_getNextDay - 2017.11.29 at 17h 55m 15s.xml">
-      <configuration name="ApplicationTests.getNextDay" configurationId="JUnit" />
-    </history-entry>
-  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57237000" />
+    <option name="totallyTimeSpent" value="4000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -684,16 +281,6 @@
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="测试提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试提交" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1108,105 +695,5 @@
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <last-edited>demo-admin:war</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.5" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Spring</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>Spring|demo-admin</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: ch.qos.logback:logback-classic:1.1.11</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ScopeChooserConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
