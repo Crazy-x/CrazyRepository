@@ -22,6 +22,6 @@ public class ApplicationTests {
 
         List<User> userList = userMapper.findUserList();
 
-        System.out.println(userList.get(0).getName());
+        System.out.println(userList.get(0).getAccount());
     }
 }
