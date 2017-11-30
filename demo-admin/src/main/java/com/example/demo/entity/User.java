@@ -6,6 +6,7 @@ import java.util.Date;
 
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.activerecord.Model;
+import com.example.demo.utils.PropertyTransfer;
 
 import java.io.Serializable;
 
@@ -16,7 +17,7 @@ import java.io.Serializable;
  * @author Crazy
  * @since 2017-11-29
  */
-public class User extends Model<User> {
+public class User extends Model<User> implements PropertyTransfer<User> {
 
     private static final long serialVersionUID = 1L;
 
