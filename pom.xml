@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 任何子模块的parent标签都必须引用此处的 groupId、artifactId、version-->
+    <groupId>com.example</groupId>
+    <artifactId>demo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <!-- Maven Pom 项目，这里必须是pom -->
+    <packaging>pom</packaging>
+
+    <!-- 父级标签，SpringBoot项目自带的，不需要改 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.8.RELEASE</version>
+        <relativePath/> <!-- 主pom不用写路径 -->
+    </parent>
+
+    <!-- 属性标签，统一管理依赖版本信息，使用方法：${java.version} -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+
+        <druid.version>1.0.29</druid.version>
+        <velocity.version>1.7</velocity.version>
+        <mybatis.version>1.2.0</mybatis.version>
+        <springfox.version>2.6.1</springfox.version>
+        <mybatis.plus.version>2.0.8</mybatis.plus.version>
+
+    </properties>
+
+    <!-- 依赖管理 -->
+    <!--dependencyManagement里只是声明依赖，并不实现引入，因此子项目需要显式的声明需要用的依赖。-->
+    <!--<dependencyManagement>-->
+    <dependencies>
+
+        <!-- web：包含了mvc、starter、tomcat-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- lang3工具包 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.5</version>
+        </dependency>
+
+        <!-- 配置处理器 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- autoconfigure：开启自动配置注解 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+
+        <!-- redis -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+        <!-- test -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- 代码生成模版引擎 -->
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+            <version>${velocity.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <!--</dependencyManagement>-->
+
+    <!-- 子模块：所有子模块都需要在这里声明-->
+    <modules>
+        <module>demo-admin</module>
+    </modules>
+
+    <!-- 依赖远程仓库：如果本地没有jar包，就从阿里云远程仓库下载到本地 -->
+    <repositories>
+        <repository>
+            <id>aliyun</id>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <!-- 插件远程仓库 -->
+    <pluginRepositories>
+        <pluginRepository>
+            <id>aliyun</id>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+</project>

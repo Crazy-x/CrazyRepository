@@ -1,0 +1,59 @@
+#------------------------------
+#server 相关配置
+#------------------------------
+server:
+    port: 9090
+    tomcat:
+         uri-encoding: utf-8
+
+#------------------------------
+#spring 相关配置
+#------------------------------
+spring:
+    profiles: # pom.xml对应的环境配置
+         active: test
+    devtools: # 开发者工具：热部署
+         restart: # 启动
+             enabled: false
+         livereload:
+             enabled: false # 实时刷新
+ #------------------------------
+ #日志相关配置
+ #------------------------------
+logging:
+    path: /app/logs
+    level:
+        root: debug
+#------------------------------
+#数据源配置信息，可以配置多个
+#------------------------------
+datasource:
+    #主数据源
+    master:
+        name: master
+        url: jdbc:mysql://127.0.0.1/demo-test?autoReconnect=true&useUnicode=true&characterEncoding=utf8
+        username: root
+        password: root
+        #这里是配置druid连接池
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        # 初始化大小，最小，最大
+        initialSize: 2
+        minIdle: 5
+        maxActive: 20
+        # 获取连接时最大等待时间，单位毫秒
+        maxWait: 60000
+        # 间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+        timeBetweenEvictionRunsMillis: 60000
+        # 一个连接在池中最小生存的时间，单位是毫秒
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: select 1
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxOpenPreparedStatements: 20
+        # 监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+        filters: stat,wall,log4j
+        # 合并多个DruidDataSource的监控数据
+        useGlobalDataSourceStat: false
