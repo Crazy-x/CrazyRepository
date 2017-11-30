@@ -11,11 +11,10 @@ target/
 
 ### IntelliJ IDEA ###
 .idea
-workspace.xml
 *.iws
 *.iml
 *.ipr
-*.xml
+
 
 ### NetBeans ###
 nbproject/private/
