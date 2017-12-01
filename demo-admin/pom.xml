@@ -84,6 +84,13 @@
             <version>${jhipster.version}</version>
         </dependency>
 
+        <!--加密包-->
+        <dependency>
+            <groupId>com.github.ulisesbocchio</groupId>
+            <artifactId>jasypt-spring-boot-starter</artifactId>
+            <version>${jasypt.version}</version>
+        </dependency>
+
     </dependencies>
 
     <!--构建打包资源文件-->
