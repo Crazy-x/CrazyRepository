@@ -10,15 +10,42 @@ server:
 #spring 相关配置
 #------------------------------
 spring:
-    profiles: # pom.xml对应的环境配置
+    # pom.xml对应的环境配置
+    profiles:
         active: dev
-    devtools: # 开发者工具：热部署
-        restart: # 启动
+     # 开发者工具
+    devtools:
+        restart:
+            # 热部署：启动
             enabled: true
         livereload:
-            enabled: false # 实时刷新
+            # 实时刷新：关闭
+            enabled: false
+    # Redis 配置
+    redis:
+        # 数据库索引（默认为0）
+        database: 5
+        # 服务器地址
+        host: 127.0.0.1
+        # 服务器连接端口（默认6379）
+        port: 9379
+        # 服务器连接密码（默认为空）
+        password: 57ilcYzVUoXzvieKLpV67ZQ2wj5HlL6Z
+        pool:
+            # 连接池最大连接数（使用负值表示没有限制）
+            max-active: 500
+            # 连接池最大阻塞等待时间（使用负值表示没有限制）
+            max-wait: 500
+            # 连接池中的最大空闲连接
+            max-idle: 500
+            # 连接池中的最小空闲连接
+            min-idle: 5
+            # 连接超时时间（毫秒）
+            timeout: 0
 
-#公共属性配置
+#------------------------------
+# application 相关配置
+#------------------------------
 application:
     #数据库服务地址
     db-url: 127.0.0.1

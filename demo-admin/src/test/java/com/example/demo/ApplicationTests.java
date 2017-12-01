@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.demo.cache.RedisCache;
 import com.example.demo.entity.User;
 import com.example.demo.mapper.UserMapper;
 import org.junit.Test;
@@ -27,6 +28,12 @@ public class ApplicationTests {
 
         User user = userList.get(0);
 
-        System.out.println(user.getAccount());
+        RedisCache.put(user.getAccount(), user.getAccount());
+
+        RedisCache.put("age", user.getAge());
+
+        String account = (String) RedisCache.get("account");
+
+        System.out.println(account);
     }
 }
