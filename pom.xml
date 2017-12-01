@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!-- 任何子模块的parent标签都必须引用此处的 groupId、artifactId、version-->
-    <groupId>com.example</groupId>
-    <artifactId>demo</artifactId>
+    <groupId>com.crazy</groupId>
+    <artifactId>crazy-coding</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <!-- Maven Pom 项目，这里必须是pom -->
     <packaging>pom</packaging>
@@ -91,7 +91,7 @@
 
     <!-- 子模块：所有子模块都需要在这里声明-->
     <modules>
-        <module>demo-admin</module>
+        <module>crazy-admin</module>
     </modules>
 
     <!-- 依赖远程仓库：如果本地没有jar包，就从阿里云远程仓库下载到本地 -->
