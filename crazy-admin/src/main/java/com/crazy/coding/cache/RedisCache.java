@@ -21,15 +21,23 @@ public class RedisCache {
 
     /**
      * 初始化缓存提供者
+     * <p>
+     * 被@PostConstruct修饰的方法会在服务器加载Servlet的时候运行，
+     * 并且只会被服务器调用一次，类似于Servlet的inti()方法。
+     * 运行顺序：构造函数之后，Servlet的init()方法之前。
+     * </p>
      */
     @PostConstruct
     public void init() {
         String cache = env.getProperty("application.cache", "redis");
 
         if (cache.equals("redis")) {
-            RedisCacheTemplate redisCacheTemplate = new RedisCacheTemplate();
-            redisCacheTemplate.setRedisTemplate(redisTemplate);
-            provider = redisCacheTemplate;
+
+            RedisCacheConfig config = new RedisCacheConfig();
+
+            config.setRedisTemplate(redisTemplate);
+
+            provider = config;
         }
     }
 
@@ -68,5 +76,4 @@ public class RedisCache {
     public static void clear() {
         provider.clear();
     }
-
 }

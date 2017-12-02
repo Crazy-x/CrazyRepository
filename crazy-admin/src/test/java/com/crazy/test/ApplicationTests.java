@@ -29,9 +29,11 @@ public class ApplicationTests {
 
         User user = userList.get(0);
 
-        RedisCache.put(user.getAccount(), user.getAccount());
+        RedisCache.put("user", user);
 
         RedisCache.put("age", user.getAge());
+
+        RedisCache.put(user.getAccount(), user.getAccount());
 
         String account = (String) RedisCache.get("account");
 

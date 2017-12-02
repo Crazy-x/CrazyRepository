@@ -7,7 +7,13 @@ import java.util.concurrent.TimeUnit;
 
 import static org.apache.commons.lang3.StringUtils.isBlank;
 
-public class RedisCacheTemplate implements Cache<String, Object> {
+/**
+ * <p>
+ * 重新包装RedisTemplate里面操作缓存的方法;
+ * 由于自动注解的原因，RedisTemplate自动获取application.yml里面的redis属性。
+ * </p>
+ */
+public class RedisCacheConfig implements Cache<String, Object> {
 
     private RedisTemplate<String, Object> redisTemplate;
 
