@@ -22,5 +22,6 @@ public class BasicPasswordTest {
 
         // 断言函数：结果为true则测试通过
         assertTrue("结果为false!", encryptor.checkPassword(str, password));
+
     }
 }

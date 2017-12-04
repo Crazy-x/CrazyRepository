@@ -55,6 +55,25 @@ application:
     base-package: com.crazy.coding
 
 #------------------------------
+# jhipster：代码生成器   相关配置
+#------------------------------
+jhipster:
+    #跨域相关配置
+    cors:
+        #允许源头
+        allowed-origins: "*"
+        #允许请求方式
+        allowed-methods: GET, PUT, POST, DELETE, OPTIONS
+        #允许请求头
+        allowed-headers: "*"
+        #暴露的请求头
+        exposed-headers:
+        #允许认证信息
+        allow-credentials: true
+        #最大时长
+        max-age: 1800
+
+#------------------------------
 #日志相关配置
 #------------------------------
 logging:
