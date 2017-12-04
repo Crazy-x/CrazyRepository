@@ -24,7 +24,6 @@ public class ApplicationTests {
 
     @Test
     public void Test() {
-
         List<User> userList = userMapper.findUserList();
 
         User user = userList.get(0);
@@ -35,8 +34,10 @@ public class ApplicationTests {
 
         RedisCache.put(user.getAccount(), user.getAccount());
 
-        String account = (String) RedisCache.get("account");
+        User user1 = (User) RedisCache.get("user");
 
-        System.out.println(account);
+        System.out.println(user1.getAccount());
     }
 }
+
+
