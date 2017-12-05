@@ -18,9 +18,7 @@ import org.springframework.web.filter.CorsFilter;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 
-/**
- * Configuration of web application with Servlet 3.0 APIs.
- */
+
 @Configuration
 public class WebConfigurer implements ServletContextInitializer, EmbeddedServletContainerCustomizer {
 
