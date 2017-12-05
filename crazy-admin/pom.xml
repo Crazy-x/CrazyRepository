@@ -98,6 +98,12 @@
             <version>${fastjson.version}</version>
         </dependency>
 
+        <!--定时任务支持-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+        </dependency>
+
     </dependencies>
 
     <!--构建打包资源文件-->
