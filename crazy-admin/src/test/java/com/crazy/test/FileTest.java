@@ -1,6 +1,8 @@
 package com.crazy.test;
 
 
+import org.junit.Test;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,18 +11,22 @@ public class FileTest {
 
     private static List<String> filelist = new ArrayList<String>();
 
-    public static void main(String[] args) throws IOException {
+    @Test
+    public void Test() throws IOException {
 
         String filePath = "F:\\IdeaProject\\eps\\eps-admin\\src";
 
         getFiles(filePath);
         for (String file : filelist) {
+
             if (BufferedReaderAndBufferedWriter(file, "F:\\javadoc.txt")) {
 
                 System.out.println("文件写出成功");
             } else {
 
                 System.out.println("文件写出失败");
+
+                break;
             }
         }
 
