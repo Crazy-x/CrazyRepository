@@ -17,6 +17,7 @@ import javax.annotation.Resource;
  * <p>
  * spring boot 自带的是转换工具是jackson,也就是使用注解@ResponseBody的默认的效果；
  * 这里是把默认的变成fastjson，因为更快！！
+ * 已经在WebConfigurer处理过中文乱码的问题了，所以这里不用。
  * </p>
  */
 @Configuration
