@@ -5,6 +5,7 @@ import com.crazy.coding.cache.RedisCache;
 import com.crazy.coding.entity.User;
 import com.crazy.coding.mapper.UserMapper;
 import io.github.jhipster.config.JHipsterProperties;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -41,8 +46,10 @@ public class ApplicationTests {
 
         System.out.println(user1.getAccount());
 
+
         System.out.println(jHipsterProperties.getCors().getAllowedMethods().size());
     }
+
 }
 
 
