@@ -16,7 +16,7 @@ import java.util.Map;
 public class MybatisPlusGenerator {
 
     // 下面四个属性需要改的
-    private static final String DB_URL = "jdbc:mysql://127.0.0.1/demo-dev?characterEncoding=utf8";
+    private static final String DB_URL = "jdbc:mysql://127.0.0.1/crazy-coding?characterEncoding=utf8";
     private static final String DB_USER = "root";
     private static final String DB_PASS = "root";
     private static final String ROOT = "F:/IdeaProject/crazy-coding/crazy-admin";

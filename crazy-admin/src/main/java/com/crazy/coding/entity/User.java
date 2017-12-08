@@ -42,16 +42,6 @@ public class User extends Model<User> implements PropertyTransfer<User> {
     private String name;
 
     /**
-     * 年龄
-     */
-    private Integer age;
-
-    /**
-     * 备注
-     */
-    private String comment;
-
-    /**
      * 创建时间
      */
     private Date createAt;
@@ -92,22 +82,6 @@ public class User extends Model<User> implements PropertyTransfer<User> {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    public String getComment() {
-        return comment;
-    }
-
-    public void setComment(String comment) {
-        this.comment = comment;
     }
 
     public Date getCreateAt() {

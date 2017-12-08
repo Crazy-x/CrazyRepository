@@ -50,7 +50,7 @@ application:
     #数据库服务地址
     db-url: 127.0.0.1
     #数据库名
-    db-name: demo-dev
+    db-name: crazy-coding
     #包名
     base-package: com.crazy.coding
 

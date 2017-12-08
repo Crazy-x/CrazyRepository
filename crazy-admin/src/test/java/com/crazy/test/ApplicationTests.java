@@ -29,19 +29,17 @@ public class ApplicationTests {
 
     @Test
     public void Test() {
-//        List<User> userList = userMapper.findUserList();
-//
-//        User user = userList.get(0);
-//
-//        RedisCache.put("user", user);
-//
-//        RedisCache.put("age", user.getAge());
-//
-//        RedisCache.put(user.getAccount(), user.getAccount());
-//
-//        User user1 = (User) RedisCache.get("user");
-//
-//        System.out.println(user1.getAccount());
+        List<User> userList = userMapper.findUserList();
+
+        User user = userList.get(0);
+
+        RedisCache.put("user", user);
+
+        RedisCache.put(user.getAccount(), user.getAccount());
+
+        User user1 = (User) RedisCache.get("user");
+
+        System.out.println(user1.getAccount());
 
         System.out.println(jHipsterProperties.getCors().getAllowedMethods().size());
     }

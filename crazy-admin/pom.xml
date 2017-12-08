@@ -155,6 +155,7 @@
                                 </resource>
                             </resources>
                         </configuration>
+
                     </execution>
                 </executions>
             </plugin>
