@@ -33,6 +33,11 @@ public interface Cache<K, V> {
     void put(K key, V value);
 
     /**
+     * 自增计数器
+     */
+    void increment(K key, long value);
+
+    /**
      * 新增缓存，设置过期时间，单位为分钟
      */
     void put(K key, V value, long minutes);

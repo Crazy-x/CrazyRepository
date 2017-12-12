@@ -67,6 +67,15 @@ public class RedisCacheConfig implements Cache<String, Object> {
     }
 
     @Override
+    public void increment(String key, long value) {
+        if (isBlank(key)) {
+            return;
+        }
+
+        redisTemplate.opsForValue().increment(key, value);
+    }
+
+    @Override
     public void put(String key, Object value, long minutes) {
         if (isBlank(key)) {
             return;

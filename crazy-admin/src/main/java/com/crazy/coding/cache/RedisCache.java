@@ -61,6 +61,10 @@ public class RedisCache {
         provider.put(key, value);
     }
 
+    public static void increment(String key, long value) {
+        provider.increment(key, value);
+    }
+
     public static void put(String key, Object value, long minutes) {
         provider.put(key, value, minutes);
     }

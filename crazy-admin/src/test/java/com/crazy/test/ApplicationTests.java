@@ -34,7 +34,8 @@ public class ApplicationTests {
 
     @Test
     public void Incr() {
-        redisTemplate.opsForValue().increment("id", 1);
+
+        RedisCache.increment("id", 1);
 
         String id = (String) RedisCache.getIncrValue("id");
 
