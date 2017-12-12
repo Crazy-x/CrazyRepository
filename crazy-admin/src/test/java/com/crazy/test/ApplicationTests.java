@@ -5,18 +5,14 @@ import com.crazy.coding.cache.RedisCache;
 import com.crazy.coding.entity.User;
 import com.crazy.coding.mapper.UserMapper;
 import io.github.jhipster.config.JHipsterProperties;
-import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -31,6 +27,19 @@ public class ApplicationTests {
 
     @Resource
     private JHipsterProperties jHipsterProperties;
+
+    @Resource
+    private RedisTemplate<String, Object> redisTemplate;
+
+
+    @Test
+    public void Incr() {
+        redisTemplate.opsForValue().increment("id", 1);
+
+        String id = (String) RedisCache.getIncrValue("id");
+
+        System.out.println(id);
+    }
 
     @Test
     public void Test() {

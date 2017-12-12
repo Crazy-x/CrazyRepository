@@ -18,6 +18,11 @@ public interface Cache<K, V> {
     V get(K key, V defaults);
 
     /**
+     * 按key获取自增长的值
+     */
+    V getIncrValue(K key);
+
+    /**
      * 判断key缓存是否存在
      */
     boolean exist(K key);

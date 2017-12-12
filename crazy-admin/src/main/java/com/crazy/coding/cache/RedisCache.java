@@ -49,6 +49,10 @@ public class RedisCache {
         return provider.get(key, defaults);
     }
 
+    public static Object getIncrValue(String key) {
+        return provider.getIncrValue(key);
+    }
+
     public static boolean exist(String key) {
         return provider.exist(key);
     }
@@ -76,4 +80,5 @@ public class RedisCache {
     public static void clear() {
         provider.clear();
     }
+
 }

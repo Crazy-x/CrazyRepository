@@ -1,6 +1,8 @@
 package com.crazy.coding.cache;
 
+import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.serializer.RedisSerializer;
 
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -30,6 +32,20 @@ public class RedisCacheConfig implements Cache<String, Object> {
     public Object get(String key, Object defaults) {
         Object value = get(key);
         return value == null ? defaults : value;
+    }
+
+    @Override
+    public Object getIncrValue(String key) {
+        if (isBlank(key)) {
+            return null;
+        }
+
+        RedisSerializer<String> serializer = redisTemplate.getStringSerializer();
+        RedisConnection connection = redisTemplate.getConnectionFactory().getConnection();
+        byte[] keys = serializer.serialize(key);
+        byte[] vals = connection.get(keys);
+
+        return serializer.deserialize(vals);
     }
 
     @Override

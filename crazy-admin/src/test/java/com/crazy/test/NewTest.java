@@ -3,6 +3,8 @@ package com.crazy.test;
 import org.apache.commons.lang3.StringUtils;
 import org.jasypt.util.password.BasicPasswordEncryptor;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,6 +20,32 @@ public class NewTest {
     private BasicPasswordEncryptor encryptor = new BasicPasswordEncryptor();
 
     private String str = "crazy-code";
+
+    @Autowired
+    private RedisTemplate<String, Object> redisTemplate;
+
+    @Test
+    public void Incr() {
+        redisTemplate.opsForValue().increment("id", 1);
+
+        Long id = (Long) redisTemplate.opsForValue().get("id");
+
+        System.out.println(id);
+    }
+
+    @Test
+    public void Math() {
+        int number = 15;
+        double i = 1 - 0.9;
+
+        System.out.println(i);
+        if (i == 0.1) {
+            System.out.println(true);
+        } else {
+            System.out.println(false);
+        }
+    }
+
 
     @Test
     public void Test() {
