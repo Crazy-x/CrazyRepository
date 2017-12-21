@@ -96,6 +96,25 @@
             <version>${velocity.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <!--包含下面两个，内嵌 ActivityMQ，如果宕机，就无法看到图形化界面-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-activemq</artifactId>
+        </dependency>
+
+        <!--java message service-->
+        <!--<dependency>-->
+        <!--<groupId>org.springframework</groupId>-->
+        <!--<artifactId>spring-jms</artifactId>-->
+        <!--</dependency>-->
+
+        <!--activeMQ-->
+        <!--<dependency>-->
+        <!--<groupId>org.apache.activemq</groupId>-->
+        <!--<artifactId>activemq-all</artifactId>-->
+        <!--</dependency>-->
+
     </dependencies>
     <!--</dependencyManagement>-->
 

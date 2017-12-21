@@ -14,7 +14,7 @@ public class ScheduledServiceImpl implements ScheduledService {
     private static Logger log = LoggerFactory.getLogger(ScheduledServiceImpl.class);
 
     @Override
-    @Scheduled(cron = "0 * * * * ?")
+//    @Scheduled(cron = "0 * * * * ?")
     public void task() {
         log.info("task is ok !");
     }
@@ -22,14 +22,14 @@ public class ScheduledServiceImpl implements ScheduledService {
 
     @Override
     @Async("taskExecutor")
-    @Scheduled(cron = "0 * * * * ?")
+//    @Scheduled(cron = "0 * * * * ?")
     public void asyncTask1() {
         log.info("asyncTask1 is ok !");
     }
 
     @Override
     @Async
-    @Scheduled(cron = "0 * * * * ?")
+//    @Scheduled(cron = "0 * * * * ?")
     public void asyncTask2() {
         log.info("asyncTask2 is ok !");
     }

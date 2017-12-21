@@ -42,7 +42,26 @@ spring:
             min-idle: 5
             # 连接超时时间（毫秒）
             timeout: 0
-
+    # jms 配置
+    jms:
+        # 意思是发布/订阅域，如果为true，则是topic(发布/订阅主题)；如果是false或者默认，则是queue(点对点消息队列)。
+        pub-sub-domain: true
+    # activemq 配置
+    activemq:
+        # 中间件服务地址：61616为消息代理接口 ，8161 为管理界面
+        broker-url: tcp://127.0.0.1:61616
+        # 管理页面登录帐号
+        user: admin
+        # 管理页面登录密码
+        password: admin
+        # 是否启用内存模式（也就是不安装MQ，项目启动时同时也启动一个MQ实例）
+        in-memory: true
+        pool:
+            # 如果此处设置为true，需要加activemq-pool jar包，否则会自动配置失败，报JmsMessagingTemplate注入失败
+            enabled: false
+        # 信任所有包
+        packages:
+            trust-all: true
 #------------------------------
 # application 相关配置
 #------------------------------

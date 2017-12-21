@@ -18,4 +18,29 @@
         FROM user
     </select>
 
+    <select id="test">
+        SELECT t_et_document.*
+        FROM
+        t_et_document
+        LEFT JOIN t_pm_documentcolumn
+        ON t_et_document.DocumentCode = t_pm_documentcolumn.DocumentCode
+        LEFT JOIN t_et_documentaudit
+        ON t_et_document.DocumentCode = t_et_documentaudit.DocumentCode
+        <where>
+            t_pm_documentcolumn.ColumnManagemenCode IN (1, 2, 3)
+            <if test="">
+                AND
+                t_et_documentaudit.Opinion = 1
+            </if>
+            <if test="">
+                AND
+                t_et_document.Title LIKE 111
+            </if>
+            <if test="">
+                AND
+                t_et_document.Keyword LIKE 111
+            </if>
+        </where>
+    </select>
+
 </mapper>
