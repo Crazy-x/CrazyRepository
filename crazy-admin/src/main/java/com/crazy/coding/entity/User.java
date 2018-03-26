@@ -105,4 +105,8 @@ public class User extends Model<User> implements PropertyTransfer<User> {
         return this.id;
     }
 
+    @Override
+    public String toString() {
+        return id + " " + account + " " + password + " " + name;
+    }
 }

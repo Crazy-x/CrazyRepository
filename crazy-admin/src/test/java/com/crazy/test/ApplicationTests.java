@@ -5,6 +5,7 @@ import com.crazy.coding.cache.RedisCache;
 import com.crazy.coding.entity.User;
 import com.crazy.coding.mapper.UserMapper;
 import io.github.jhipster.config.JHipsterProperties;
+import org.aspectj.weaver.ast.Var;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -35,15 +37,23 @@ public class ApplicationTests {
     @Test
     public void Incr() {
 
-        RedisCache.increment("id", 1);
+//        RedisCache.increment("id", 1);
+//
+//        String id = (String) RedisCache.getIncrValue("id");
 
-        String id = (String) RedisCache.getIncrValue("id");
+        List<String> list = new ArrayList<>();
+        list.add("1111");
+        list.add("2222");
+        list.add("3333");
+        list.forEach(str -> {
+            System.out.println(str);
+        });
 
-        System.out.println(id);
     }
 
     @Test
     public void Test() {
+
         List<User> userList = userMapper.findUserList();
 
         User user = userList.get(0);

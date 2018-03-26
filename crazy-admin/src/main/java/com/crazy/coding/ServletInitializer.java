@@ -4,7 +4,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 /**
- * servlet初始化类，不用管
+ * 可以通过war包启动
  */
 public class ServletInitializer extends SpringBootServletInitializer {
 
