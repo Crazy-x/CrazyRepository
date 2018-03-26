@@ -1,0 +1,142 @@
+#------------------------------
+#server 相关配置
+#------------------------------
+server:
+    port: 80
+    tomcat:
+        uri-encoding: utf-8
+
+#------------------------------
+#spring 相关配置
+#------------------------------
+spring:
+    # pom.xml对应的环境配置
+    profiles:
+        active: prod
+     # 开发者工具
+    devtools:
+        restart:
+            # 热部署：启动
+            enabled: false
+        livereload:
+            # 实时刷新：关闭
+            enabled: false
+    # Redis 配置
+    redis:
+        # 数据库索引（默认为0）
+        database: 1
+        # 服务器地址
+        host: 123.207.180.37
+        # 服务器连接端口（默认6379）
+        port: 6379
+        # 服务器连接密码（默认为空）
+        password: 57ilcYzVUoXzvieKLpV67ZQ2wj5HlL6Z
+        pool:
+            # 连接池最大连接数（使用负值表示没有限制）
+            max-active: 500
+            # 连接池最大阻塞等待时间（使用负值表示没有限制）
+            max-wait: 500
+            # 连接池中的最大空闲连接
+            max-idle: 500
+            # 连接池中的最小空闲连接
+            min-idle: 5
+            # 连接超时时间（毫秒）
+            timeout: 0
+    # jms 配置
+    jms:
+        # 意思是发布/订阅域，如果为true，则是topic(发布/订阅主题)；如果是false或者默认，则是queue(点对点消息队列)。
+        pub-sub-domain: true
+    # activemq 配置
+    activemq:
+        # 中间件服务地址：61616为消息代理接口 ，8161 为管理界面
+        broker-url: tcp://123.207.180.37:61616
+        # 管理页面登录帐号
+        user: admin
+        # 管理页面登录密码
+        password: admin
+        # 是否启用内存模式（也就是不安装MQ，项目启动时同时也启动一个MQ实例）
+        in-memory: true
+        pool:
+            # 如果此处设置为true，需要加activemq-pool jar包，否则会自动配置失败，报JmsMessagingTemplate注入失败
+            enabled: false
+        # 信任所有包
+        packages:
+            trust-all: true
+#------------------------------
+# application 相关配置
+#------------------------------
+application:
+    #数据库服务地址
+    db-url: 123.207.180.37
+    #数据库名
+    db-name: crazy_code_prod
+    #包名
+    base-package: com.crazy.coding
+
+#------------------------------
+# jhipster：代码生成器   相关配置
+#------------------------------
+jhipster:
+    #跨域相关配置
+    cors:
+        #允许源头
+        allowed-origins: "*"
+        #允许请求方式
+        allowed-methods: GET, PUT, POST, DELETE, OPTIONS
+        #允许请求头
+        allowed-headers: "*"
+        #暴露的请求头
+        exposed-headers:
+        #允许认证信息
+        allow-credentials: true
+        #最大时长
+        max-age: 1800
+
+#------------------------------
+#日志相关配置
+#------------------------------
+logging:
+    path: ./logs
+    level:
+        root: info
+        org.apache: info
+        org.apache.shiro: debug
+        org.springframework: info
+        org.springframework.beans: info
+        org.springframework.web: info
+        org.springframework.web.context: info
+        com.baomidou: info
+
+#------------------------------
+#数据源配置信息，可以配置多个
+#------------------------------
+datasource:
+    #主数据源
+    master:
+        name: master
+        url: jdbc:mysql://${application.db-url}/${application.db-name}?autoReconnect=true&useUnicode=true&characterEncoding=utf8
+        username: root
+        password: root
+        #这里是配置druid连接池，以下是连接池的配置
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        # 初始化大小，最小，最大
+        initialSize: 2
+        minIdle: 5
+        maxActive: 20
+        # 获取连接时最大等待时间，单位毫秒
+        maxWait: 60000
+        # 间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+        timeBetweenEvictionRunsMillis: 60000
+        # 一个连接在池中最小生存的时间，单位是毫秒
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: select 1
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxOpenPreparedStatements: 20
+        # 监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+        filters: stat,wall,log4j
+        # 合并多个DruidDataSource的监控数据
+        useGlobalDataSourceStat: false
