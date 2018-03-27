@@ -26,20 +26,20 @@ public class MsgConsumerTest {
 
     @Test
     public void start() {
-        log.debug("Message test start!");
-        producerService.sendQueueMessage("This is queue message!");
-        log.debug("Send queue message ok!");
-        producerService.sendTopicMessage("This is topic message!");
-        log.debug("Send topic message ok!");
+//        log.debug("Message test start!");
+//        producerService.sendQueueMessage("This is queue message!");
+//        log.debug("Send queue message ok!");
+//        producerService.sendTopicMessage("This is topic message!");
+//        log.debug("Send topic message ok!");
     }
 
-    @JmsListener(destination = "simple.queue", containerFactory = "jmsListenerContainerQueue")
-    public void queue(Object message) {
-        log.debug("Queue：" + message);
-    }
-
-    @JmsListener(destination = "simple.topic", containerFactory = "jmsListenerContainerTopic")
-    public void topic(Object message) {
-        log.debug("Topic：" + message);
-    }
+//    @JmsListener(destination = "simple.queue", containerFactory = "jmsListenerContainerQueue")
+//    public void queue(Object message) {
+//        log.debug("Queue：" + message);
+//    }
+//
+//    @JmsListener(destination = "simple.topic", containerFactory = "jmsListenerContainerTopic")
+//    public void topic(Object message) {
+//        log.debug("Topic：" + message);
+//    }
 }

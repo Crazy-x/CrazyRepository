@@ -116,7 +116,7 @@ datasource:
         name: master
         url: jdbc:mysql://${application.db-url}/${application.db-name}?autoReconnect=true&useUnicode=true&characterEncoding=utf8
         username: root
-        password: root
+        password: crazy.6688
         #这里是配置druid连接池，以下是连接池的配置
         type: com.alibaba.druid.pool.DruidDataSource
         driver-class-name: com.mysql.jdbc.Driver

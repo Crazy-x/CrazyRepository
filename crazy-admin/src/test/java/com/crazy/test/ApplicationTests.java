@@ -40,34 +40,34 @@ public class ApplicationTests {
 //        RedisCache.increment("id", 1);
 //
 //        String id = (String) RedisCache.getIncrValue("id");
-
-        List<String> list = new ArrayList<>();
-        list.add("1111");
-        list.add("2222");
-        list.add("3333");
-        list.forEach(str -> {
-            System.out.println(str);
-        });
+//
+//        List<String> list = new ArrayList<>();
+//        list.add("1111");
+//        list.add("2222");
+//        list.add("3333");
+//        list.forEach(str -> {
+//            System.out.println(str);
+//        });
 
     }
 
     @Test
     public void Test() {
 
-        List<User> userList = userMapper.findUserList();
-
-        User user = userList.get(0);
-
-        RedisCache.put("user", user);
-
-        RedisCache.put(user.getAccount(), user.getAccount());
-
-        User user1 = (User) RedisCache.get("user");
-
-        System.out.println(user1.getAccount());
-
-
-        System.out.println(jHipsterProperties.getCors().getAllowedMethods().size());
+//        List<User> userList = userMapper.findUserList();
+//
+//        User user = userList.get(0);
+//
+//        RedisCache.put("user", user);
+//
+//        RedisCache.put(user.getAccount(), user.getAccount());
+//
+//        User user1 = (User) RedisCache.get("user");
+//
+//        System.out.println(user1.getAccount());
+//
+//
+//        System.out.println(jHipsterProperties.getCors().getAllowedMethods().size());
     }
 
 }
