@@ -5,7 +5,7 @@ import com.crazy.coding.entity.User;
 
 /**
  * <p>
- * 服务类
+ * 用户服务类
  * </p>
  *
  * @author Crazy
