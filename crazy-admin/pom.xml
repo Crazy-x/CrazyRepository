@@ -3,108 +3,45 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>crazy-admin</artifactId>
-    <packaging>war</packaging>
-
-    <name>crazy-admin</name>
-    <description></description>
-
     <!--子模块引用父类pom.xml-->
     <parent>
-        <groupId>com.crazy</groupId>
+        <groupId>com.crazy.coding</groupId>
         <artifactId>crazy-coding</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>1.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <properties>
-    </properties>
+    <artifactId>crazy-admin</artifactId>
+    <version>1.0.0</version>
+    <name>crazy-admin</name>
+
+    <packaging>war</packaging>
 
     <dependencies>
 
-        <!-- mysql -->
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
+            <groupId>com.crazy.coding</groupId>
+            <artifactId>crazy-entity</artifactId>
+            <version>1.0.0</version>
         </dependency>
 
-        <!--mybatis-->
         <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>${mybatis.version}</version>
+            <groupId>com.crazy.coding</groupId>
+            <artifactId>crazy-service</artifactId>
+            <version>1.0.0</version>
         </dependency>
 
-        <!--mybatis plus-->
         <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus</artifactId>
-            <version>${mybatis.plus.version}</version>
+            <groupId>com.crazy.coding</groupId>
+            <artifactId>crazy-utils</artifactId>
+            <version>1.0.0</version>
         </dependency>
-
-        <!--druid：数据连接池-->
+        
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>${druid.version}</version>
+            <groupId>com.crazy.coding</groupId>
+            <artifactId>crazy-config</artifactId>
+            <version>1.0.0</version>
         </dependency>
-
-        <!--swagger2：REST ful API 说明-->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>${springfox.version}</version>
-        </dependency>
-
-        <!--Api 文档显示页面-->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>${springfox.version}</version>
-        </dependency>
-
-        <!--logging日志记录-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-logging</artifactId>
-        </dependency>
-
-        <!--bean utils：类工具包-->
-        <dependency>
-            <groupId>commons-beanutils</groupId>
-            <artifactId>commons-beanutils</artifactId>
-            <version>${bean.utils.version}</version>
-        </dependency>
-
-        <!--java微服务框架：常用代码产生器-->
-        <dependency>
-            <groupId>io.github.jhipster</groupId>
-            <artifactId>jhipster</artifactId>
-            <version>${jhipster.version}</version>
-        </dependency>
-
-        <!--加密包-->
-        <dependency>
-            <groupId>com.github.ulisesbocchio</groupId>
-            <artifactId>jasypt-spring-boot-starter</artifactId>
-            <version>${jasypt.version}</version>
-        </dependency>
-
-        <!--json转换工具-->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>${fastjson.version}</version>
-        </dependency>
-
-        <!--定时任务支持-->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context-support</artifactId>
-        </dependency>
-
-
 
     </dependencies>
 
@@ -122,18 +59,18 @@
                         <phase>validate</phase>
 
                         <!--复制resources-->
-                        <!--<goals>-->
-                        <!--<goal>copy-resources</goal>-->
-                        <!--</goals>-->
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
 
                         <configuration>
 
-                            <!--复制resources到下面的路径，这个项目并没有此文件夹！！-->
-                            <!--<outputDirectory>target/classes</outputDirectory>-->
-                            <!--<useDefaultDelimiters>false</useDefaultDelimiters>-->
-                            <!--<delimiters>-->
-                            <!--<delimiter>#</delimiter>-->
-                            <!--</delimiters>-->
+                            <!--复制resources到下面的路径-->
+                            <outputDirectory>target/classes</outputDirectory>
+                            <useDefaultDelimiters>false</useDefaultDelimiters>
+                            <delimiters>
+                                <delimiter>#</delimiter>
+                            </delimiters>
 
                             <!--需要打包构建的文件-->
                             <resources>
@@ -141,8 +78,9 @@
                                     <directory>src/main/resources/</directory>
                                     <filtering>true</filtering>
                                     <includes>
-                                        <include>**/*.xml</include>
-                                        <include>**/*.yml</include>
+                                        <include>**.*</include>
+                                        <include>**/*.*</include>
+                                        <include>**/*/*.*</include>
                                     </includes>
                                 </resource>
 
@@ -198,6 +136,7 @@
                 <dependency>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-devtools</artifactId>
+                    <scope>runtime</scope>
                     <optional>true</optional>
                 </dependency>
 

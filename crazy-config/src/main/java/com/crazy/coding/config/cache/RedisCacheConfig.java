@@ -1,4 +1,4 @@
-package com.crazy.coding.cache;
+package com.crazy.coding.config.cache;
 
 import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.core.RedisTemplate;

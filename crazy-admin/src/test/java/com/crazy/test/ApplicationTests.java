@@ -1,11 +1,9 @@
 package com.crazy.test;
 
 import com.crazy.coding.Application;
-import com.crazy.coding.cache.RedisCache;
-import com.crazy.coding.entity.User;
+import com.crazy.coding.config.cache.RedisCache;
 import com.crazy.coding.mapper.UserMapper;
 import io.github.jhipster.config.JHipsterProperties;
-import org.aspectj.weaver.ast.Var;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,8 +12,6 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * 测试类

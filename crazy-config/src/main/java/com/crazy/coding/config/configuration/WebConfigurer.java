@@ -30,7 +30,7 @@ public class WebConfigurer implements ServletContextInitializer, EmbeddedServlet
 
     /**
      * 使用 final 关键字在构造函数初始化类，可以防止重复初始化，从而影响到类属性调用
-     * 其实用@esource注解注入也一样
+     * 其实用@Resource注解注入也一样
      */
     public WebConfigurer(Environment env, JHipsterProperties jHipsterProperties) {
         this.env = env;

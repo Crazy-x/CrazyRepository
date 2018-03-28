@@ -4,9 +4,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!-- 任何子模块的parent标签都必须引用此处的 groupId、artifactId、version-->
-    <groupId>com.crazy</groupId>
+    <groupId>com.crazy.coding</groupId>
     <artifactId>crazy-coding</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <!-- Maven Pom 项目，这里必须是pom -->
     <packaging>pom</packaging>
 
@@ -30,7 +30,7 @@
         <mybatis.version>1.2.0</mybatis.version>
 
         <velocity.version>1.7</velocity.version>
-        <thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>
+        <thymeleaf.version>3.0.8.RELEASE</thymeleaf.version>
         <thymeleaf-layout-dialect.version>2.1.1</thymeleaf-layout-dialect.version>
 
         <jhipster.version>1.1.2</jhipster.version>
@@ -38,8 +38,17 @@
         <springfox.version>2.6.1</springfox.version>
         <mybatis.plus.version>2.0.8</mybatis.plus.version>
         <bean.utils.version>20030211.134440</bean.utils.version>
-
     </properties>
+
+    <!-- 子模块：所有子模块都需要在这里声明-->
+    <modules>
+        <module>crazy-admin</module>
+        <module>crazy-config</module>
+        <module>crazy-entity</module>
+        <module>crazy-service</module>
+        <module>crazy-utils</module>
+        <module>crazy-web</module>
+    </modules>
 
     <!-- 依赖管理 -->
     <!--dependencyManagement里只是声明依赖，并不实现引入，因此子项目需要显式的声明需要用的依赖。我这里没使用！-->
@@ -124,16 +133,113 @@
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
+        <!-- mysql -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!--mybatis-->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>${mybatis.version}</version>
+        </dependency>
+
+        <!--mybatis plus-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus</artifactId>
+            <version>${mybatis.plus.version}</version>
+        </dependency>
+
+        <!--druid：数据连接池-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>${druid.version}</version>
+        </dependency>
+
+        <!--swagger2：REST ful API 说明-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${springfox.version}</version>
+        </dependency>
+
+        <!--Api 文档显示页面-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${springfox.version}</version>
+        </dependency>
+
+        <!--logging日志记录-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+        </dependency>
+
+        <!--bean utils：类工具包-->
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>${bean.utils.version}</version>
+        </dependency>
+
+        <!--java微服务框架：常用代码产生器-->
+        <dependency>
+            <groupId>io.github.jhipster</groupId>
+            <artifactId>jhipster</artifactId>
+            <version>${jhipster.version}</version>
+        </dependency>
+
+        <!--加密包-->
+        <dependency>
+            <groupId>com.github.ulisesbocchio</groupId>
+            <artifactId>jasypt-spring-boot-starter</artifactId>
+            <version>${jasypt.version}</version>
+        </dependency>
+
+        <!--json转换工具-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+
+        <!--定时任务支持-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+        </dependency>
+
+        <!--java解析HTML的工具-->
+        <dependency>
+            <groupId>net.sourceforge.nekohtml</groupId>
+            <artifactId>nekohtml</artifactId>
+            <version>1.9.9</version>
+        </dependency>
+
     </dependencies>
     <!--</dependencyManagement>-->
 
-    <!-- 子模块：所有子模块都需要在这里声明-->
-    <modules>
-        <module>crazy-admin</module>
-    </modules>
-
-    <!-- 依赖远程仓库：如果本地没有jar包，就从阿里云远程仓库下载到本地 -->
+    <!-- 依赖远程仓库：如果本地没有jar包，就从程仓库下载到本地 -->
     <repositories>
+
+        <repository>
+            <id>spring-snapshots</id>
+            <url>http://repo.spring.io/snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>spring-milestones</id>
+            <url>http://repo.spring.io/milestone</url>
+        </repository>
+
         <repository>
             <id>aliyun</id>
             <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
@@ -144,10 +250,21 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
+
     </repositories>
 
     <!-- 插件远程仓库：原理同上 -->
     <pluginRepositories>
+
+        <pluginRepository>
+            <id>spring-snapshots</id>
+            <url>http://repo.spring.io/snapshot</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>spring-milestones</id>
+            <url>http://repo.spring.io/milestone</url>
+        </pluginRepository>
+
         <pluginRepository>
             <id>aliyun</id>
             <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
@@ -158,6 +275,7 @@
                 <enabled>false</enabled>
             </snapshots>
         </pluginRepository>
+
     </pluginRepositories>
 
 </project>

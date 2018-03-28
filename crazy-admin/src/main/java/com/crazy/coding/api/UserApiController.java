@@ -8,7 +8,7 @@ import com.crazy.coding.entity.User;
 import com.crazy.coding.entity.common.PageResult;
 import com.crazy.coding.entity.common.Result;
 import com.crazy.coding.service.UserService;
-import com.crazy.coding.utils.ResponseEntityBuilder;
+import com.crazy.coding.entity.common.ResponseEntityBuilder;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
