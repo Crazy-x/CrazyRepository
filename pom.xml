@@ -30,6 +30,9 @@
         <mybatis.version>1.2.0</mybatis.version>
 
         <velocity.version>1.7</velocity.version>
+        <thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>
+        <thymeleaf-layout-dialect.version>2.1.1</thymeleaf-layout-dialect.version>
+
         <jhipster.version>1.1.2</jhipster.version>
         <fastjson.version>1.2.24</fastjson.version>
         <springfox.version>2.6.1</springfox.version>
@@ -89,7 +92,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- 代码生成模版引擎 -->
+        <!-- 代码生成模版引擎vm -->
         <dependency>
             <groupId>org.apache.velocity</groupId>
             <artifactId>velocity</artifactId>
@@ -114,6 +117,12 @@
         <!--<groupId>org.apache.activemq</groupId>-->
         <!--<artifactId>activemq-all</artifactId>-->
         <!--</dependency>-->
+
+        <!--视图模版html-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
 
     </dependencies>
     <!--</dependencyManagement>-->
