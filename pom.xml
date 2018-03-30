@@ -47,7 +47,6 @@
         <module>crazy-entity</module>
         <module>crazy-service</module>
         <module>crazy-utils</module>
-        <module>crazy-web</module>
     </modules>
 
     <!-- 依赖管理 -->
@@ -220,6 +219,13 @@
             <groupId>net.sourceforge.nekohtml</groupId>
             <artifactId>nekohtml</artifactId>
             <version>1.9.9</version>
+        </dependency>
+
+        <!--lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.8</version>
         </dependency>
 
     </dependencies>

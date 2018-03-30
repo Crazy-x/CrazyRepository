@@ -1,6 +1,6 @@
 package com.crazy.coding.config.exception;
 
-import com.crazy.coding.entity.common.ErrorInfo;
+import com.crazy.coding.entity.common.ExceptionInfo;
 import com.sun.istack.internal.Nullable;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.boot.autoconfigure.web.ErrorProperties;
@@ -51,31 +51,31 @@ public class ExceptionInfoBuilder implements HandlerExceptionResolver, Ordered {
     }
 
     /**
-     * 构建错误信息.(ErrorInfo)
+     * 构建错误信息.(ExceptionInfo)
      */
-    public ErrorInfo getErrorInfo(HttpServletRequest request) {
+    public ExceptionInfo getExceptionInfo(HttpServletRequest request) {
 
-        return getErrorInfo(request, getError(request));
+        return getExceptionInfo(request, getException(request));
     }
 
     /**
-     * 构建错误信息.(ErrorInfo)
+     * 构建错误信息.(ExceptionInfo)
      */
-    public ErrorInfo getErrorInfo(HttpServletRequest request, Throwable error) {
-        ErrorInfo errorInfo = new ErrorInfo();
-        errorInfo.setTime(LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME));
-        errorInfo.setUrl(request.getRequestURL().toString());
-        errorInfo.setError(error.toString());
-        errorInfo.setStatusCode(getHttpStatus(request).value());
-        errorInfo.setReasonPhrase(getHttpStatus(request).getReasonPhrase());
-        errorInfo.setStackTrace(getStackTraceInfo(error, isIncludeStackTrace(request)));
-        return errorInfo;
+    public ExceptionInfo getExceptionInfo(HttpServletRequest request, Throwable error) {
+        ExceptionInfo exceptionInfo = new ExceptionInfo();
+        exceptionInfo.setTime(LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME));
+        exceptionInfo.setUrl(request.getRequestURL().toString());
+        exceptionInfo.setError(error.toString());
+        exceptionInfo.setStatusCode(getHttpStatus(request).value());
+        exceptionInfo.setReasonPhrase(getHttpStatus(request).getReasonPhrase());
+        exceptionInfo.setStackTrace(getStackTraceInfo(error, isIncludeStackTrace(request)));
+        return exceptionInfo;
     }
 
     /**
      * 获取错误.(Error/Exception)
      */
-    public Throwable getError(HttpServletRequest request) {
+    public Throwable getException(HttpServletRequest request) {
         //根据HandlerExceptionResolver接口方法来获取错误.
         Throwable error = (Throwable) request.getAttribute(ERROR_NAME);
         //根据Request对象获取错误.

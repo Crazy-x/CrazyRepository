@@ -69,7 +69,7 @@ spring:
         # 指定模板的前缀
         prefix: classpath:/templates/
         # 指定模板的模式，默认 HTML5
-        mode: LEGACYHTML5
+        mode: LEGACYHTML
         # 是否开启模板缓存，默认 true
         cache: false
         # 是否允许MVC使用Thymeleaf，默认 true

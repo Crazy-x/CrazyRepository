@@ -13,7 +13,6 @@ import javax.annotation.Resource;
 /**
  * 测试控制器
  */
-@Api(value = "Test API", description = " API")
 @RestController
 @RequestMapping("/api/test")
 public class TestApiController {
@@ -25,7 +24,6 @@ public class TestApiController {
     private MsgProducerService producerService;
 
     @GetMapping("/send")
-    @ApiOperation(value = "ActiveMQ Send Message Test", notes = "ActiveMQ Send Message Test")
     public String send() {
 
         producerService.sendQueueMessage("This is queue message!");

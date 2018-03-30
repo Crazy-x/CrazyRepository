@@ -1,6 +1,6 @@
 package com.crazy.coding.entity.common;
 
-public class ErrorInfo {
+public class ExceptionInfo {
 
     private String time;//发生时间
     private String url;//访问Url
