@@ -36,7 +36,7 @@
             <artifactId>crazy-utils</artifactId>
             <version>1.0.0</version>
         </dependency>
-        
+
         <dependency>
             <groupId>com.crazy.coding</groupId>
             <artifactId>crazy-config</artifactId>
@@ -45,16 +45,16 @@
 
     </dependencies>
 
-    <!--构建打包资源文件-->
     <build>
         <plugins>
+            <!--构建打包资源文件-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
                 <executions>
                     <execution>
 
-                        <!--默认的资源-->
+                        <!-- 在default生命周期的 validate阶段就执行resources插件的copy-resources目标 -->
                         <id>default-resources</id>
                         <phase>validate</phase>
 
@@ -75,30 +75,33 @@
                             <!--需要打包构建的文件-->
                             <resources>
                                 <resource>
+                                    <!-- 指定resources插件处理哪个目录下的资源文件 -->
                                     <directory>src/main/resources/</directory>
-                                    <filtering>true</filtering>
-                                    <includes>
-                                        <include>**.*</include>
-                                        <include>**/*.*</include>
-                                        <include>**/*/*.*</include>
-                                    </includes>
+                                    <!--是否开启资源过滤-->
+                                    <filtering>false</filtering>
+                                    <!--<includes>-->
+                                    <!--<include>**.*</include>-->
+                                    <!--<include>**/*.*</include>-->
+                                    <!--<include>**/*/*.*</include>-->
+                                    <!--</includes>-->
                                 </resource>
 
                                 <!--需要排除构建的文件-->
-                                <resource>
-                                    <directory>src/main/resources/</directory>
-                                    <filtering>false</filtering>
-                                    <excludes>
-                                        <exclude>**/*.xml</exclude>
-                                        <exclude>**/*.yml</exclude>
-                                    </excludes>
-                                </resource>
+                                <!--<resource>-->
+                                <!--<directory>src/main/resources/</directory>-->
+                                <!--<filtering>false</filtering>-->
+                                <!--<excludes>-->
+                                <!--<exclude>**/*.xml</exclude>-->
+                                <!--<exclude>**/*.yml</exclude>-->
+                                <!--</excludes>-->
+                                <!--</resource>-->
                             </resources>
                         </configuration>
 
                     </execution>
                 </executions>
             </plugin>
+            <!--打包项目-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

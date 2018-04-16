@@ -44,7 +44,7 @@ spring:
             timeout: 0
     # jms 配置
     jms:
-        # 意思是发布/订阅域，如果为true，则是topic(发布/订阅主题)；如果是false或者默认，则是queue(点对点消息队列)。
+        # 发布/订阅域，如果为true，则是topic(发布/订阅主题)；如果是false或者默认，则是queue(点对点消息队列)。
         pub-sub-domain: true
     # activemq 配置
     activemq:
@@ -69,7 +69,7 @@ spring:
         # 指定模板的前缀
         prefix: classpath:/templates/
         # 指定模板的模式，默认 HTML5
-        mode: LEGACYHTML
+        mode: LEGACYHTML5
         # 是否开启模板缓存，默认 true
         cache: false
         # 是否允许MVC使用Thymeleaf，默认 true
